@@ -35,15 +35,18 @@ def verify_pin(self, input_pin):
         return "incorrect pin"
 
 
-def change_pin(old_pin, new_pin):
-    input_pin = int(input("inter your password:"))
+def change_pin(self ,old_pin,confirm_pin): 
+        input_pin = int(input("inter your password:"))
 
-
-if input_pin != self.pin
-    print("your pin is not correcet")
-return
-new_pin = int(input("enter new pin"))
-confirm_pin = int(input("rewrite the pin"))
-if new_pin != confirm_pin:
-    print("")
-
+        if input_pin != self.pin:
+            print("in correct pin")
+        else:
+            new_pin = int(input("enter new pin"))
+            confirm_pin = int(input("rewrite the pin"))
+            if new_pin == confirm_pin:
+                print("the pass has chinge")
+                print(new_pin)
+                return True
+            else:
+                print("the new pin not equal confirm pin")
+            return False
