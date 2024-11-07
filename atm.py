@@ -1,12 +1,34 @@
 class ATM:
     def __init__(self, initial_balance=50000, default_pin="0000"):
+        """
+        Initialize the ATM with an initial balance and a PIN.
+        
+        Parameters:
+        initial_balance (float): The starting balance of the ATM account.
+        default_pin (str): The default PIN for account access.
+        """
         self.balance = initial_balance
         self.pin = default_pin
 
     def check_balance(self):
+        """
+        Display the current balance of the ATM account.
+        
+        Returns:
+        float: The current balance in the account.
+        """
         print(f"\nYour current balance is: {self.balance:.2f} SDG")
 
     def withdraw(self, amount):
+        """
+        Withdraw a specified amount from the ATM account, if sufficient funds are available.
+        
+        Parameters:
+        amount (float): The amount of money to withdraw.
+        
+        Returns:
+        str: A message indicating the result of the withdrawal operation.
+        """
         if amount <= 0:
             return "Please enter a valid amount to withdraw."
         elif amount > self.balance:
@@ -16,6 +38,15 @@ class ATM:
             return f"Withdrawal successful! Your new balance is ${self.balance:.2f}"
 
     def deposit(self, amount):
+        """
+        Deposit a specified amount into the ATM account.
+        
+        Parameters:
+        amount (float): The amount of money to deposit.
+        
+        Returns:
+        str: A message indicating the new balance after the deposit.
+        """
         if amount <= 0:
             return "Please enter a valid deposit amount."
         else:
@@ -23,9 +54,29 @@ class ATM:
             return f"Deposit successful! Your new balance is {self.balance:.2f} SDG"
 
     def verify_pin(self, input_pin):
+        """
+        Verify if the entered PIN matches the stored PIN.
+        
+        Parameters:
+        input_pin (str): The PIN entered by the user.
+        
+        Returns:
+        str: A message indicating whether the PIN is correct or not.
+        """
         return input_pin == self.pin
 
     def change_pin(self, old_pin, new_pin, confirm_pin):
+        """
+        Change the ATM PIN after verifying the current PIN.
+        
+        Parameters:
+        old_pin (str): The current PIN for verification.
+        new_pin (str): The new PIN to set for the account.
+        confirm_pin (str): The confirmation of the new PIN.
+        
+        Returns:
+        str: A message indicating whether the PIN was successfully changed.
+        """
         if old_pin != self.pin:
             return "Incorrect current PIN."
         elif new_pin != confirm_pin:
@@ -37,6 +88,9 @@ class ATM:
             return "PIN changed successfully."
 
 def atm_menu():
+    """
+    Display the ATM menu and handle user inputs for various operations.
+    """
     atm = ATM()
     print("Welcome to the ATM simulation!")
     
