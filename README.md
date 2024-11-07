@@ -28,9 +28,10 @@ This project is a simulation of a basic ATM system built in Python. It allows us
 
 ## Usage
 1. **Launch the Program**:
-   After running the `atm.py` script, you will see a menu with options.
+    After running the `atm.py` script, you will be asked to enter your pin. 
+2. After entering the correct pin, you will see a menu with options.
 
-2. **Select an Option**:
+3. **Select an Option**:
    - **Check Balance**: Press `1` to display the current balance.
    - **Withdraw Money**: Press `2` and enter an amount to withdraw.
    - **Deposit Money**: Press `3` and enter an amount to deposit.
@@ -46,7 +47,7 @@ This project is a simulation of a basic ATM system built in Python. It allows us
 - Enter `5` to exit.
 
 ## Testing
-Tests can be run for each core function, such as checking the balance, making withdrawals, deposits, and changing the PIN. Unit tests can be added to ensure each function works as expected.
+Tests can be run for each core function, such as checking the balance, making withdrawals, deposits and changing the PIN. Unit tests can be added to ensure each function works as expected.
 
 ## Documentation
 For detailed documentation of each function, see the code comments in `atm.py`. Each function includes explanations of:
