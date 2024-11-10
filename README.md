@@ -49,6 +49,36 @@ This project is a simulation of a basic ATM system built in Python. It allows us
 ## Testing
 Tests can be run for each core function, such as checking the balance, making withdrawals, deposits and changing the PIN. Unit tests can be added to ensure each function works as expected.
 
+# ATM Simulation Unit Tests
+
+This project includes a set of unit tests for the `ATM` class in `atm_simulation.py`. The `ATM` class simulates basic ATM operations, such as checking balance, withdrawing, depositing, and changing the PIN. The unit tests verify the functionality and correctness of each feature.
+
+## Test Cases
+
+The unit tests cover the following scenarios:
+
+1. **Balance Inquiry**: Checking if the balance inquiry returns the correct balance.
+2. **Withdrawals**:
+   - Valid withdrawals that update the balance correctly.
+   - Invalid withdrawals (e.g., insufficient funds or negative amounts).
+3. **Deposits**:
+   - Valid deposits that update the balance correctly.
+   - Invalid deposits (e.g., negative or zero amounts).
+4. **PIN Verification**:
+   - Successful PIN verification.
+   - Failed PIN verification with incorrect PIN entries.
+5. **Change PIN**:
+   - Successful PIN changes.
+   - Failed PIN change attempts (e.g., incorrect current PIN or mismatched new PIN).
+
+## Running the Tests
+
+To execute the unit tests, navigate to the project directory in your terminal and use the following command:
+
+```bash
+python -m unittest unitTest_atm.py
+```
+
 ## Documentation
 For detailed documentation of each function, see the code comments in `atm.py`. Each function includes explanations of:
 - Parameters: Input values expected for each function.
