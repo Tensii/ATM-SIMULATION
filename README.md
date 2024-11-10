@@ -51,7 +51,7 @@ Tests can be run for each core function, such as checking the balance, making wi
 
 # ATM Simulation Unit Tests
 
-This project includes a set of unit tests for the `ATM` class in `atm_simulation.py`. The `ATM` class simulates basic ATM operations, such as checking balance, withdrawing, depositing, and changing the PIN. The unit tests verify the functionality and correctness of each feature.
+This project includes a set of unit tests for the `ATM` class in `atm.py`. The `ATM` class simulates basic ATM operations, such as checking balance, withdrawing, depositing, and changing the PIN. The unit tests verify the functionality and correctness of each feature.
 
 ## Test Cases
 
@@ -76,7 +76,7 @@ The unit tests cover the following scenarios:
 To execute the unit tests, navigate to the project directory in your terminal and use the following command:
 
 ```bash
-python -m unittest unitTest_atm.py
+python -m unittest test_atm.py
 ```
 
 ## Documentation
